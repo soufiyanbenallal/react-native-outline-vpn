@@ -1,0 +1,30 @@
+{
+  "name": "OutlineVpnExample",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "pods": "pod-install --quiet"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-native": "0.75.1",
+    "react-native-outline-vpn": "file:../react-native-outline-vpn/"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@babel/plugin-transform-private-methods": "^7.25.9",
+    "@babel/preset-env": "^7.20.0",
+    "@babel/runtime": "^7.20.0",
+    "@react-native/babel-preset": "0.75.1",
+    "@react-native/eslint-config": "0.75.1",
+    "@react-native/metro-config": "0.75.1",
+    "@react-native/typescript-config": "0.75.1",
+    "babel-plugin-module-resolver": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
