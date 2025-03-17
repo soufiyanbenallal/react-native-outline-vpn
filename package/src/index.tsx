@@ -30,9 +30,9 @@ const startVpn: startVPN = (data: vpnOptions) => {
     tunnelId,
     localizedDescription,
   } = data;
-  return new Promise((resolve, reject) => {
+  return new Promise(async (resolve, reject) => {
     if (Platform.OS === 'ios') {
-      OutlineVpn.startVpn(
+      await OutlineVpn.startVpn(
         host,
         port,
         password,
@@ -41,9 +41,10 @@ const startVpn: startVPN = (data: vpnOptions) => {
         providerBundleIdentifier,
         serverAddress,
         tunnelId,
-        localizedDescription
+        localizedDescription,
+        (x: string) => { resolve(x) },
+        (e: string) => { reject(e) }
       );
-      resolve(true);
     } else {
       OutlineVpn.saveCredential(host, port, password, method, prefix).then(
         (credentialResult: any) => {
@@ -63,7 +64,7 @@ const startVpn: startVPN = (data: vpnOptions) => {
 };
 
 export default {
-  startVpn(options: vpnOptions): Promise<Boolean> {
+  startVpn(options: vpnOptions): Promise<Boolean | String> {
     return startVpn(options);
   },
 };

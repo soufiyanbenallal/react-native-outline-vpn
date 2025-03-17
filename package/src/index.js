@@ -14,7 +14,7 @@ const OutlineVpn = NativeModules.OutlineVpn
         },
       }
     );
-const startVpn: startVPN = (data) => {
+const startVpn = (data) => {
   const {
     host,
     port,
@@ -26,9 +26,9 @@ const startVpn: startVPN = (data) => {
     tunnelId,
     localizedDescription,
   } = data;
-  return new Promise((resolve, reject) => {
+  return new Promise(async (resolve, reject) => {
     if (Platform.OS === 'ios') {
-      OutlineVpn.startVpn(
+      await OutlineVpn.startVpn(
         host,
         port,
         password,
@@ -37,7 +37,9 @@ const startVpn: startVPN = (data) => {
         providerBundleIdentifier,
         serverAddress,
         tunnelId,
-        localizedDescription
+        localizedDescription,
+        (x) => { resolve(x) },
+        (e) => { reject(e) }
       );
     } else {
       OutlineVpn.saveCredential(host, port, password, method, prefix).then(

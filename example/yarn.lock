@@ -2510,7 +2510,7 @@ __metadata:
     babel-plugin-module-resolver: ^5.0.0
     react: 18.3.1
     react-native: 0.75.1
-    react-native-outline-vpn: "file:./../react-native-outline-vpn/"
+    react-native-outline-vpn: "file:../react-native-outline-vpn/"
   languageName: unknown
   linkType: soft
 
@@ -6659,15 +6659,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-outline-vpn@file:./../react-native-outline-vpn/::locator=OutlineVpnExample%40workspace%3A.":
-  version: 1.0.1
-  resolution: "react-native-outline-vpn@file:./../react-native-outline-vpn/#./../react-native-outline-vpn/::hash=f59110&locator=OutlineVpnExample%40workspace%3A."
+"react-native-outline-vpn@file:../react-native-outline-vpn/::locator=OutlineVpnExample%40workspace%3A.":
+  version: 1.0.2
+  resolution: "react-native-outline-vpn@file:../react-native-outline-vpn/#../react-native-outline-vpn/::hash=93df7f&locator=OutlineVpnExample%40workspace%3A."
   dependencies:
     metro-react-native-babel-preset: ^0.77.0
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: ead64942ca1d393ba6a4d694619ccfad398253cd3dc6d4eeaa05f08623438ec7643ee98b106e13fd97fa27b2a9b41a83ca03dd0fe2c2a42e687f4884ddec9f57
+  checksum: 47105a739bc1b4dbe59093a02f39b7b127ed2e24ebf5341c35920cf91cc82ec7679d9d75de5d3376f149bc0384fd9378999d1594d0c469f08a2a4a183d5325e8
   languageName: node
   linkType: hard
 

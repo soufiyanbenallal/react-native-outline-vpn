@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* OutlineVpnExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* OutlineVpnExampleTests.m */; };
-		0C80B921A6F3F58F76C31292 /* libPods-OutlineVpnExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-OutlineVpnExample.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		7699B88040F8A987B510C191 /* libPods-OutlineVpnExample-OutlineVpnExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-OutlineVpnExample-OutlineVpnExampleTests.a */; };
+		28AA377DD75C8309129FFBF9 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 77470125B7E90CC7F8EF8C57 /* PrivacyInfo.xcprivacy */; };
+		39CD4718E385C1B09FC2BFAB /* libPods-OutlineVpnExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98EB40929BC3FDF4A687C5CC /* libPods-OutlineVpnExample.a */; };
+		3FCD658890EF5D6470F293C7 /* libPods-OutlineVpnExample-OutlineVpnExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0B17B5659E7CC1C857545C7 /* libPods-OutlineVpnExample-OutlineVpnExampleTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		8A09EB842D8623D500A5ED1A /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A09EB832D8623D500A5ED1A /* NetworkExtension.framework */; };
+		8A09EB882D8623D500A5ED1A /* PacketTunnelProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A09EB872D8623D500A5ED1A /* PacketTunnelProvider.m */; };
+		8A09EB8D2D8623D500A5ED1A /* OutlineVpn.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8A09EB822D8623D500A5ED1A /* OutlineVpn.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8A09EB972D8628A800A5ED1A /* Tun2socks.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A09EB932D86286C00A5ED1A /* Tun2socks.xcframework */; };
+		8A09EB982D8628A800A5ED1A /* Tun2socks.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8A09EB932D86286C00A5ED1A /* Tun2socks.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,7 +30,39 @@
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = OutlineVpnExample;
 		};
+		8A09EB8B2D8623D500A5ED1A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A09EB812D8623D500A5ED1A;
+			remoteInfo = OutlineVpn;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8A09EB912D8623D500A5ED1A /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8A09EB8D2D8623D500A5ED1A /* OutlineVpn.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A09EB992D8628A800A5ED1A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8A09EB982D8628A800A5ED1A /* Tun2socks.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		00E356EE1AD99517003FC87E /* OutlineVpnExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OutlineVpnExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,14 +75,23 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = OutlineVpnExample/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = OutlineVpnExample/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = OutlineVpnExample/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		19F6CBCC0A4E27FBF8BF4A61 /* libPods-OutlineVpnExample-OutlineVpnExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OutlineVpnExample-OutlineVpnExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B4392A12AC88292D35C810B /* Pods-OutlineVpnExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutlineVpnExample.debug.xcconfig"; path = "Target Support Files/Pods-OutlineVpnExample/Pods-OutlineVpnExample.debug.xcconfig"; sourceTree = "<group>"; };
-		5709B34CF0A7D63546082F79 /* Pods-OutlineVpnExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutlineVpnExample.release.xcconfig"; path = "Target Support Files/Pods-OutlineVpnExample/Pods-OutlineVpnExample.release.xcconfig"; sourceTree = "<group>"; };
-		5B7EB9410499542E8C5724F5 /* Pods-OutlineVpnExample-OutlineVpnExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutlineVpnExample-OutlineVpnExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-OutlineVpnExample-OutlineVpnExampleTests/Pods-OutlineVpnExample-OutlineVpnExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-OutlineVpnExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OutlineVpnExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A9714E58D2244BA7EA68745 /* Pods-OutlineVpnExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutlineVpnExample.debug.xcconfig"; path = "Target Support Files/Pods-OutlineVpnExample/Pods-OutlineVpnExample.debug.xcconfig"; sourceTree = "<group>"; };
+		77470125B7E90CC7F8EF8C57 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = OutlineVpnExample/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		7C53EA00490C4A73662F0016 /* Pods-OutlineVpnExample-OutlineVpnExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutlineVpnExample-OutlineVpnExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-OutlineVpnExample-OutlineVpnExampleTests/Pods-OutlineVpnExample-OutlineVpnExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = OutlineVpnExample/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		89C6BE57DB24E9ADA2F236DE /* Pods-OutlineVpnExample-OutlineVpnExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutlineVpnExample-OutlineVpnExampleTests.release.xcconfig"; path = "Target Support Files/Pods-OutlineVpnExample-OutlineVpnExampleTests/Pods-OutlineVpnExample-OutlineVpnExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		8A09EB822D8623D500A5ED1A /* OutlineVpn.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OutlineVpn.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A09EB832D8623D500A5ED1A /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		8A09EB862D8623D500A5ED1A /* PacketTunnelProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PacketTunnelProvider.h; sourceTree = "<group>"; };
+		8A09EB872D8623D500A5ED1A /* PacketTunnelProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PacketTunnelProvider.m; sourceTree = "<group>"; };
+		8A09EB892D8623D500A5ED1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A09EB8A2D8623D500A5ED1A /* OutlineVpn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OutlineVpn.entitlements; sourceTree = "<group>"; };
+		8A09EB922D86261E00A5ED1A /* OutlineVpnExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = OutlineVpnExample.entitlements; path = OutlineVpnExample/OutlineVpnExample.entitlements; sourceTree = "<group>"; };
+		8A09EB932D86286C00A5ED1A /* Tun2socks.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Tun2socks.xcframework; path = ../Tun2socks.xcframework; sourceTree = "<group>"; };
+		8FA8EF088238ACE3EC42E3A2 /* Pods-OutlineVpnExample-OutlineVpnExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutlineVpnExample-OutlineVpnExampleTests.release.xcconfig"; path = "Target Support Files/Pods-OutlineVpnExample-OutlineVpnExampleTests/Pods-OutlineVpnExample-OutlineVpnExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		98EB40929BC3FDF4A687C5CC /* libPods-OutlineVpnExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OutlineVpnExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD392B74B39728E0ECE5A3AD /* Pods-OutlineVpnExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutlineVpnExample.release.xcconfig"; path = "Target Support Files/Pods-OutlineVpnExample/Pods-OutlineVpnExample.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F0B17B5659E7CC1C857545C7 /* libPods-OutlineVpnExample-OutlineVpnExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OutlineVpnExample-OutlineVpnExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7699B88040F8A987B510C191 /* libPods-OutlineVpnExample-OutlineVpnExampleTests.a in Frameworks */,
+				3FCD658890EF5D6470F293C7 /* libPods-OutlineVpnExample-OutlineVpnExampleTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,7 +107,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-OutlineVpnExample.a in Frameworks */,
+				39CD4718E385C1B09FC2BFAB /* libPods-OutlineVpnExample.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A09EB7F2D8623D500A5ED1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A09EB972D8628A800A5ED1A /* Tun2socks.xcframework in Frameworks */,
+				8A09EB842D8623D500A5ED1A /* NetworkExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +143,7 @@
 		13B07FAE1A68108700A75B9A /* OutlineVpnExample */ = {
 			isa = PBXGroup;
 			children = (
+				8A09EB922D86261E00A5ED1A /* OutlineVpnExample.entitlements */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -94,6 +151,7 @@
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
+				77470125B7E90CC7F8EF8C57 /* PrivacyInfo.xcprivacy */,
 			);
 			name = OutlineVpnExample;
 			sourceTree = "<group>";
@@ -101,9 +159,11 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8A09EB932D86286C00A5ED1A /* Tun2socks.xcframework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-OutlineVpnExample.a */,
-				19F6CBCC0A4E27FBF8BF4A61 /* libPods-OutlineVpnExample-OutlineVpnExampleTests.a */,
+				8A09EB832D8623D500A5ED1A /* NetworkExtension.framework */,
+				98EB40929BC3FDF4A687C5CC /* libPods-OutlineVpnExample.a */,
+				F0B17B5659E7CC1C857545C7 /* libPods-OutlineVpnExample-OutlineVpnExampleTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -121,6 +181,7 @@
 				13B07FAE1A68108700A75B9A /* OutlineVpnExample */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* OutlineVpnExampleTests */,
+				8A09EB852D8623D500A5ED1A /* OutlineVpn */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
@@ -135,17 +196,29 @@
 			children = (
 				13B07F961A680F5B00A75B9A /* OutlineVpnExample.app */,
 				00E356EE1AD99517003FC87E /* OutlineVpnExampleTests.xctest */,
+				8A09EB822D8623D500A5ED1A /* OutlineVpn.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8A09EB852D8623D500A5ED1A /* OutlineVpn */ = {
+			isa = PBXGroup;
+			children = (
+				8A09EB862D8623D500A5ED1A /* PacketTunnelProvider.h */,
+				8A09EB872D8623D500A5ED1A /* PacketTunnelProvider.m */,
+				8A09EB892D8623D500A5ED1A /* Info.plist */,
+				8A09EB8A2D8623D500A5ED1A /* OutlineVpn.entitlements */,
+			);
+			path = OutlineVpn;
 			sourceTree = "<group>";
 		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B4392A12AC88292D35C810B /* Pods-OutlineVpnExample.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-OutlineVpnExample.release.xcconfig */,
-				5B7EB9410499542E8C5724F5 /* Pods-OutlineVpnExample-OutlineVpnExampleTests.debug.xcconfig */,
-				89C6BE57DB24E9ADA2F236DE /* Pods-OutlineVpnExample-OutlineVpnExampleTests.release.xcconfig */,
+				4A9714E58D2244BA7EA68745 /* Pods-OutlineVpnExample.debug.xcconfig */,
+				DD392B74B39728E0ECE5A3AD /* Pods-OutlineVpnExample.release.xcconfig */,
+				7C53EA00490C4A73662F0016 /* Pods-OutlineVpnExample-OutlineVpnExampleTests.debug.xcconfig */,
+				8FA8EF088238ACE3EC42E3A2 /* Pods-OutlineVpnExample-OutlineVpnExampleTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -157,12 +230,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "OutlineVpnExampleTests" */;
 			buildPhases = (
-				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
+				52A88B03C285288612DF13DD /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */,
-				F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */,
+				74DAE5FA6FE2C2FAFB32B928 /* [CP] Embed Pods Frameworks */,
+				051C7975219CAF763DDF5E6B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -178,22 +251,42 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "OutlineVpnExample" */;
 			buildPhases = (
-				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
+				48E06E2C342F8A4C3AD6B844 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
-				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+				8A09EB912D8623D500A5ED1A /* Embed Foundation Extensions */,
+				127435226ABBBAFCA4967243 /* [CP] Embed Pods Frameworks */,
+				B11732292F55DB2D62201726 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8A09EB8C2D8623D500A5ED1A /* PBXTargetDependency */,
 			);
 			name = OutlineVpnExample;
 			productName = OutlineVpnExample;
 			productReference = 13B07F961A680F5B00A75B9A /* OutlineVpnExample.app */;
 			productType = "com.apple.product-type.application";
+		};
+		8A09EB812D8623D500A5ED1A /* OutlineVpn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A09EB8E2D8623D500A5ED1A /* Build configuration list for PBXNativeTarget "OutlineVpn" */;
+			buildPhases = (
+				8A09EB7E2D8623D500A5ED1A /* Sources */,
+				8A09EB7F2D8623D500A5ED1A /* Frameworks */,
+				8A09EB802D8623D500A5ED1A /* Resources */,
+				8A09EB992D8628A800A5ED1A /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OutlineVpn;
+			productName = OutlineVpn;
+			productReference = 8A09EB822D8623D500A5ED1A /* OutlineVpn.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -209,6 +302,9 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						LastSwiftMigration = 1120;
+					};
+					8A09EB812D8623D500A5ED1A = {
+						CreatedOnToolsVersion = 15.4;
 					};
 				};
 			};
@@ -227,6 +323,7 @@
 			targets = (
 				13B07F861A680F5B00A75B9A /* OutlineVpnExample */,
 				00E356ED1AD99517003FC87E /* OutlineVpnExampleTests */,
+				8A09EB812D8623D500A5ED1A /* OutlineVpn */,
 			);
 		};
 /* End PBXProject section */
@@ -245,6 +342,14 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				28AA377DD75C8309129FFBF9 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A09EB802D8623D500A5ED1A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,7 +358,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -267,7 +372,24 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
+		051C7975219CAF763DDF5E6B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OutlineVpnExample-OutlineVpnExampleTests/Pods-OutlineVpnExample-OutlineVpnExampleTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OutlineVpnExample-OutlineVpnExampleTests/Pods-OutlineVpnExample-OutlineVpnExampleTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OutlineVpnExample-OutlineVpnExampleTests/Pods-OutlineVpnExample-OutlineVpnExampleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		127435226ABBBAFCA4967243 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -284,29 +406,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OutlineVpnExample/Pods-OutlineVpnExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-OutlineVpnExample-OutlineVpnExampleTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
+		48E06E2C342F8A4C3AD6B844 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -328,7 +428,29 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */ = {
+		52A88B03C285288612DF13DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OutlineVpnExample-OutlineVpnExampleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74DAE5FA6FE2C2FAFB32B928 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -345,7 +467,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OutlineVpnExample-OutlineVpnExampleTests/Pods-OutlineVpnExample-OutlineVpnExampleTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
+		B11732292F55DB2D62201726 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -360,23 +482,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OutlineVpnExample/Pods-OutlineVpnExample-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-OutlineVpnExample-OutlineVpnExampleTests/Pods-OutlineVpnExample-OutlineVpnExampleTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-OutlineVpnExample-OutlineVpnExampleTests/Pods-OutlineVpnExample-OutlineVpnExampleTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OutlineVpnExample-OutlineVpnExampleTests/Pods-OutlineVpnExample-OutlineVpnExampleTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -399,6 +504,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8A09EB7E2D8623D500A5ED1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A09EB882D8623D500A5ED1A /* PacketTunnelProvider.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -407,12 +520,17 @@
 			target = 13B07F861A680F5B00A75B9A /* OutlineVpnExample */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
+		8A09EB8C2D8623D500A5ED1A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A09EB812D8623D500A5ED1A /* OutlineVpn */;
+			targetProxy = 8A09EB8B2D8623D500A5ED1A /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-OutlineVpnExample-OutlineVpnExampleTests.debug.xcconfig */;
+			baseConfigurationReference = 7C53EA00490C4A73662F0016 /* Pods-OutlineVpnExample-OutlineVpnExampleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -439,7 +557,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-OutlineVpnExample-OutlineVpnExampleTests.release.xcconfig */;
+			baseConfigurationReference = 8FA8EF088238ACE3EC42E3A2 /* Pods-OutlineVpnExample-OutlineVpnExampleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -463,11 +581,13 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-OutlineVpnExample.debug.xcconfig */;
+			baseConfigurationReference = 4A9714E58D2244BA7EA68745 /* Pods-OutlineVpnExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = OutlineVpnExample/OutlineVpnExample.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FR3K2CN3CW;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = OutlineVpnExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -490,11 +610,13 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-OutlineVpnExample.release.xcconfig */;
+			baseConfigurationReference = DD392B74B39728E0ECE5A3AD /* Pods-OutlineVpnExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = OutlineVpnExample/OutlineVpnExample.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FR3K2CN3CW;
 				INFOPLIST_FILE = OutlineVpnExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -517,6 +639,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CC = "";
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -544,6 +667,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CXX = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
@@ -563,6 +687,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD = "";
+				LDPLUSPLUS = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -582,7 +708,14 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				USE_HERMES = true;
 			};
 			name = Debug;
 		};
@@ -590,6 +723,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CC = "";
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -617,6 +751,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				CXX = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
@@ -629,6 +764,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD = "";
+				LDPLUSPLUS = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -647,8 +784,92 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
+				USE_HERMES = true;
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8A09EB8F2D8623D500A5ED1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = OutlineVpn/OutlineVpn.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = FR3K2CN3CW;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OutlineVpn/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OutlineVpn;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.OutlineVpnExample.OutlineVpn;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8A09EB902D8623D500A5ED1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = OutlineVpn/OutlineVpn.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = FR3K2CN3CW;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OutlineVpn/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OutlineVpn;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.OutlineVpnExample.OutlineVpn;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -678,6 +899,15 @@
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
 				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A09EB8E2D8623D500A5ED1A /* Build configuration list for PBXNativeTarget "OutlineVpn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A09EB8F2D8623D500A5ED1A /* Debug */,
+				8A09EB902D8623D500A5ED1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

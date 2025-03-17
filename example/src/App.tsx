@@ -12,11 +12,10 @@ export default function App() {
       password: 'FQZV7mWkAB3l7pzg7tpv9p',
       method: 'chacha20-ietf-poly1305',
       prefix: '\u0005\u00DC\u005F\u00E0\u0001\u0020', //vpn prefix
-      providerBundleIdentifier: 'com.outlinevpnexample.OutlineVPN', //apple bundle identifier declared step-2 on guide
+      providerBundleIdentifier: 'org.reactjs.native.example.OutlineVpnExample.OutlineVpn', //apple bundle identifier declared step-2 on guide
       serverAddress: 'OutlineServer', //can be any string which user see MyPreciousVpn
       tunnelId: 'OutlineTunnel', //can be random string
       localizedDescription: 'OutlineVpn', //can be random string
-
     });
   }, []);
 

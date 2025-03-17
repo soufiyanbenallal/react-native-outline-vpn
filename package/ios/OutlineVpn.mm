@@ -16,8 +16,8 @@ RCT_EXPORT_METHOD(startVpn:(NSString *)host
                   serverAddress:(NSString *)serverAddress
                   tunnelId:(NSString *)tunnelId
                   localizedDescription:(NSString *)localizedDescription
-                  successCallback:(RCTPromiseResolveBlock)successCallback
-                  rejectCallback:(RCTPromiseResolveBlock)rejectCallback)
+                  successCallback:(RCTResponseSenderBlock)successCallback
+                  rejectCallback:(RCTResponseSenderBlock)rejectCallback)
 {
     [NETunnelProviderManager loadAllFromPreferencesWithCompletionHandler:^(NSArray<NETunnelProviderManager *> *managers, NSError *error) {
         if (error) {

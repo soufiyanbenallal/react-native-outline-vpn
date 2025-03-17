@@ -20,4 +20,4 @@ export interface vpnOptions {
   localizedDescription?: string;
 }
 
-export type startVPN = (data: vpnOptions) => Promise<Boolean>;
+export type startVPN = (data: vpnOptions) => Promise<String | Boolean>;
