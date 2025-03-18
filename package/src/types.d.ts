@@ -1,13 +1,3 @@
-/**
- * Start Outline VPN
- * @param callback A callback function that will receive the result of the suppression.
- *                 - result: A number representing the result of the suppression.
- *                           0: Not Supported
- *                           1: Already suppressed
- *                           2: Denied
- *                           3: Cancelled
- *                           4: Success
- */
 export interface vpnOptions {
   host: string;
   port: number;
@@ -20,4 +10,10 @@ export interface vpnOptions {
   localizedDescription?: string;
 }
 
+export interface VpnModule {
+  startVpn(options: VpnOptions): Promise<boolean | string>;
+}
+
+declare const vpnModule: VpnModule;
+export default vpnModule;
 export type startVPN = (data: vpnOptions) => Promise<String | Boolean>;
