@@ -34,7 +34,7 @@ Outline.startVpn({
 
 > Android hasn't need any additional configuration, but iOS needs some additional configuration. Please check the [documentation](https://rn-outline.vercel.app/) for more information.
 
-Detailed documentation page: [Documantation](https://rn-outline.vercel.app/)
+Detailed documentation page: [Documentation](https://rn-outline.vercel.app/)
 
 ## Contributing
 
