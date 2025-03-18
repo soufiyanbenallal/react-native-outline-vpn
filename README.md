@@ -14,6 +14,8 @@ or
 yarn add react-native-outline-vpn
 ```
 
+## Usage
+
 ```tsx copy
 import Outline from 'react-native-outline-vpn';
 // THIS VPN INFORMATIONS INTENTIONALLY LEFT EXPOSED, HAS 0 MB LIMIT SO CANNOT ACCESS INTERNET BUT COULD BE USE FOR TEST VPN CONNECTION
