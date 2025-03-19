@@ -81,6 +81,9 @@ android {
 repositories {
   mavenCentral()
   google()
+  flatDir {
+    dirs 'libs'  // Ensure this line is included
+  }
 }
 
 
